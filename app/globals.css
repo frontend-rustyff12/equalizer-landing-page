@@ -60,6 +60,7 @@ body {
 
   .site-wrapper {
     max-width: 1500px;
+    width: 0 auto;
   }
 
   .body-bg-1 {

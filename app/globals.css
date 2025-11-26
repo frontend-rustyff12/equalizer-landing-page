@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
+/* * {
+  border: 1px solid red;
+} */
 
 :root {
   --cyan: #66e2dc;
@@ -10,40 +13,27 @@
 }
 
 body {
+  min-height: 100vh;
+  min-width: fit-content;
+  background-image: url(/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-position: right -200px top -200px;
   color: var(--slate);
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow: hidden;
 }
 
-.text-preset-1 {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-bold text-[88px] leading-[100%] tracking-[-1px];
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(/bg-pattern-1.svg), url(/bg-main-tablet.png);
+    background-position: right -40px top -40px, right -100px top -250px;
+    background-size: 270px, auto;
+  }
 }
-
-.text-preset-2 {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-bold text-[64px] leading-[100%];
-}
-
-.text-preset-3 {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-bold text-[40px] leading-[110%];
-}
-
-.text-preset-4 {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-normal text-[20px] leading-[150%];
-}
-
-.text-preset-5-bold {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-bold text-[16px] leading-[150%];
-}
-
-.text-preset-5 {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-normal text-[16px] leading-[150%];
-}
-
-.text-preset-6 {
-  font-family: "IBM Plex Sans", sans-serif;
-  @apply font-semibold text-[18px] leading-[180%];
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url(/bg-pattern-1.svg), url(/bg-main-tablet.png);
+    background-position: right top -35px, right -180px top -260px;
+    background-size: auto;
+  }
 }

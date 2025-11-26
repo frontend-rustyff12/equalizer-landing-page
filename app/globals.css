@@ -13,27 +13,57 @@
 }
 
 body {
+  color: var(--slate);
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.site-wrapper {
   min-height: 100vh;
   min-width: fit-content;
   background-image: url(/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-position: right -200px top -200px;
-  color: var(--slate);
-  font-family: "IBM Plex Sans", sans-serif;
-  overflow: hidden;
+}
+
+.body-bg-1 {
+  background: var(--slate);
+  background-image: url(/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-bg {
+  background-color: var(--orange);
 }
 
 @media screen and (min-width: 768px) {
-  body {
+  .site-wrapper {
     background-image: url(/bg-pattern-1.svg), url(/bg-main-tablet.png);
     background-position: right -40px top -40px, right -100px top -250px;
     background-size: 270px, auto;
   }
+
+  .body-bg-1 {
+    background-image: url(/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border-radius: 16px;
+  }
 }
 @media screen and (min-width: 1024px) {
-  body {
-    background-image: url(/bg-pattern-1.svg), url(/bg-main-tablet.png);
+  .site-wrapper {
+    background-image: url(/bg-pattern-1.svg), url(/bg-main-desktop.png);
     background-position: right top -35px, right -180px top -260px;
     background-size: auto;
+  }
+
+  .site-wrapper {
+    max-width: 1500px;
+  }
+
+  .body-bg-1 {
+    background-repeat: no-repeat;
+    background-position: left 360px top 0px;
   }
 }

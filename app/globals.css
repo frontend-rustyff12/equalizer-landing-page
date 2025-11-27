@@ -4,16 +4,24 @@
   border: 1px solid red;
 } */
 
+@theme {
+  --color-cyan: #66e2dc;
+  --color-orange: #fa7453;
+  --color-yellow: #fffb64;
+  --color-white-cust: #fcfaf9;
+  --color-slate: #191826;
+}
+
 :root {
-  --cyan: #66e2dc;
-  --orange: #fa7453;
-  --yellow: #fffb64;
-  --white: #fcfaf9;
-  --slate: #191826;
+  --color-cyan: #66e2dc;
+  --color-orange: #fa7453;
+  --color-yellow: #fffb64;
+  --color-white-cust: #fcfaf9;
+  --color-slate: #191826;
 }
 
 body {
-  color: var(--slate);
+  color: var(--color-slate);
   font-family: "IBM Plex Sans", sans-serif;
   overflow-x: hidden;
 }
@@ -27,7 +35,7 @@ body {
 }
 
 .body-bg-1 {
-  background: var(--slate);
+  background: var(--color-slate);
   background-image: url(/bg-pattern-2.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -35,6 +43,45 @@ body {
 
 .card-bg {
   background-color: var(--orange);
+}
+
+.btn-1,
+.btn-2 {
+  cursor: pointer;
+}
+
+.btn-1 {
+  background-color: var(--color-slate);
+  color: var(--color-white-cust);
+  transition: all 0.5s linear;
+}
+
+.btn-1:hover {
+  background-color: var(--color-cyan);
+  color: var(--color-slate);
+}
+
+.btn-2 {
+  background-color: var(--color-white-cust);
+  color: var(--color-slate);
+  transition: all 0.5s linear;
+}
+
+.btn-2:hover {
+  background-color: var(--color-yellow);
+}
+
+.btn-1 .icon {
+  color: var(--color-white-cust);
+  transition: all 0.3s linear;
+}
+
+.btn-1:hover .icon {
+  color: var(--color-slate);
+}
+
+.btn-2 .icon {
+  color: var(--color-slate);
 }
 
 @media screen and (min-width: 768px) {

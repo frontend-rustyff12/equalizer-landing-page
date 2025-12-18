@@ -32,6 +32,8 @@ body {
   background-image: url(/bg-main-mobile.png);
   background-repeat: no-repeat;
   background-position: right -200px top -200px;
+
+  margin: 0 auto;
 }
 
 .body-bg-1 {
@@ -99,9 +101,13 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  body {
+    background-image: url(/bg-main-desktop.png);
+    background-position: right -180px top -260px;
+  }
   .site-wrapper {
-    background-image: url(/bg-pattern-1.svg), url(/bg-main-desktop.png);
-    background-position: right top -35px, right -180px top -260px;
+    background-image: url(/bg-pattern-1.svg);
+    background-position: right top -35px;
     background-size: auto;
   }
 
